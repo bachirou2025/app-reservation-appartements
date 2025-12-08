@@ -23,7 +23,7 @@ jobs:
           curl -X POST "https://api.trello.com/1/cards/${{ steps.extract.outputs.card_id }}/actions/comments" \
             -d "key=${{ secrets.TRELLO_API_KEY }}" \
             -d "token=${{ secrets.TRELLO_TOKEN }}" \
-            -d "text=Commit poussé par ${{ github.actor }}%0A${{ github.event.head_commit.message }}%0A${{ github.event.head_commit.url }}"
+            -d "text=Commit poussée par ${{ github.actor }}%0A${{ github.event.head_commit.message }}%0A${{ github.event.head_commit.url }}"
 
       - name: Move card to EN REVUE (main branch only)
         if: github.ref == 'refs/heads/main' && steps.extract.outputs.card_id != ''
