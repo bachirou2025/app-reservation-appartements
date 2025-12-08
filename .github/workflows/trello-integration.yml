@@ -38,5 +38,5 @@ jobs:
         uses: slackapi/slack-github-action@v1.24.0
         with:
           bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
-          channel-id: C0A1JAS4KRP   # Remplace par ton ID de canal Slack
+          channel-id: C09RRTK424Q   # Remplace par ton ID de canal Slack
           slack-message: "La carte Trello <https://trello.com/c/${{ steps.extract.outputs.card_id }}|EN REVUE> vient d'arriver en revue !"
